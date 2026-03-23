@@ -3,96 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My PDF Library</title>
+    <title>Welcome to Ayya's space of Spirituality</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             margin: 0;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
-            scroll-behavior: smooth;
         }
         
-        /* The Navigation Menu Style */
-        .nav-menu {
-            background-color: #2c3e50;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .nav-menu a:hover {
-            text-decoration: underline;
-            color: #3498db;
+        h1 {
+            margin-bottom: 10px;
+            color: #2c3e50;
         }
 
-        /* The PDF Container Style */
-        .pdf-container {
-            margin: 40px auto;
+        .subtitle {
+            font-size: 20px;
+            color: #34495e;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        /* Container for the vertical list of books */
+        .book-list {
             max-width: 95%;
+            margin: 0 auto;
+            text-align: left; 
+        }
+
+        /* The collapsible section */
+        details {
             background: white;
-            padding: 15px;
+            margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            overflow: hidden; 
         }
+
+        /* The clickable title */
+        summary {
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none; /* Hides default small triangle */
+        }
+        
+        summary::-webkit-details-marker {
+            display: none; /* Hides default triangle in Chrome/Safari */
+        }
+        
+        summary:hover {
+            background-color: #2c3e50;
+        }
+
+        /* The PDF iframe */
         iframe {
             width: 100%;
             height: 85vh;
             border: none;
-        }
-        .back-to-top {
-            display: inline-block;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #3498db;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to Ayya's space of Sprituality</h1>
+    <h1>Welcome to Ayya's space of Spirituality</h1>
+    <p class="subtitle">ஐயாவின் ஆன்மீக வெளிக்கு நல்வரவு</p>
     
-    <div class="nav-menu">
-        <a href="#book-one">Dad - 1</a>
-        <a href="#book-two">Dad - 2</a>
-    </div>
-
-    <div id="book-one" class="pdf-container">
-         <h2>1-NAAN Yaar?</h2>
-        <iframe src="Dad - 1 compressed.pdf"></iframe>
-        <a href="#" class="back-to-top">↑ Back to top</a>
-    </div>
-
-    <div id="book-two" class="pdf-container">
-       <h2>2-AALAYA VAZHIPATIN MUDIVU</h2>
-        <iframe src="Dad - 2 compressed.pdf"></iframe>
-        <a href="#" class="back-to-top">↑ Back to top</a>
-    </div>
-
-</body>
-</html>
-
-    <h1>Welcome to Ayya's space of Sprituality</h1>
-    <p>ஐயாவின் ஆன்மீக வெளிக்கு நல்வரவு</p>
-
-    <div class="pdf-container">
-       
-        <iframe src="Dad - 1 compressed.pdf"></iframe>
-    </div>
-
-    <div class="pdf-container">
+    <div class="book-list">
         
-        <iframe src="Dad - 2 compressed.pdf"></iframe>
+        <details>
+            <summary>📖 1-NAAN Yaar?</summary>
+            <iframe src="Dad - 1 compressed.pdf"></iframe>
+        </details>
+
+        <details>
+            <summary>📖 2-AALAYA VAZHIPATIN MUDIVU</summary>
+            <iframe src="Dad - 2 compressed.pdf"></iframe>
+        </details>
+
     </div>
 
 </body>
