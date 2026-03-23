@@ -49,11 +49,11 @@
             font-size: 22px;
             font-weight: bold;
             cursor: pointer;
-            list-style: none; /* Hides default small triangle */
+            list-style: none;
         }
         
         summary::-webkit-details-marker {
-            display: none; /* Hides default triangle in Chrome/Safari */
+            display: none;
         }
         
         summary:hover {
@@ -67,6 +67,19 @@
             border: none;
             display: block;
         }
+
+        /* The "Coming Soon" non-clickable banner */
+        .coming-soon {
+            background-color: #7f8c8d; /* Muted gray to show it's inactive */
+            color: white;
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: default; /* Normal mouse pointer instead of a clicking hand */
+        }
     </style>
 </head>
 <body>
@@ -76,7 +89,7 @@
     
     <div class="book-list">
         
-<details>
+        <details>
             <summary>📖 1-NAAN Yaar?</summary>
             <iframe src="https://docs.google.com/viewer?url=https://vigneshgv92-design.github.io/Sivalingam-ayya/Book1.pdf&embedded=true"></iframe>
         </details>
@@ -85,6 +98,10 @@
             <summary>📖 2-AALAYA VAZHIPATIN MUDIVU</summary>
             <iframe src="https://docs.google.com/viewer?url=https://vigneshgv92-design.github.io/Sivalingam-ayya/Book2.pdf&embedded=true"></iframe>
         </details>
+
+        <div class="coming-soon">
+            ⏳ More books coming soon!!
+        </div>
 
     </div>
 
